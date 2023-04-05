@@ -1,0 +1,5 @@
+.DS_Store
+.eslintcache
+Thumbs.db
+/electron/
+/node_modules/

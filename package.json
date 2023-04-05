@@ -1,15 +1,17 @@
 {
-  "name": "calculator",
-  "version": "1.0.0",
-  "description": "Simple Calculator",
+  "name": "electron-calculator",
+  "version": "1.0.2",
+  "description": "Calculator built with Electron",
+  "author": "Alex313031",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/Alex313031/electron-calculator-app",
   "main": "./app/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"start" : "electron ."
+    "test": "echo \"Error: No test specified\" && exit 1",
+    "clean": "rm -r -f -v node_modules",
+    "start": "electron ."
   },
-  "author": "Arun",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^8.2.5"
+  "dependencies": {
+    "electron": "^22.3.5"
   }
 }

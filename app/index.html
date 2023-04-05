@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self';script-src 'self' 'unsafe-inline';connect-src *">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SIMPLE CALCULATOR</title>
-<link rel="stylesheet" href="./styles.css" type="text/css">
+<title>Electron Calculator</title>
+<link rel="icon" type="image/png" sizes="48x48" href="./assets/ic_calculator_48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/ic_calculator_32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/ic_calculator_16.png">
+<meta http-equiv="Content-Security-Policy" content="script-src 'sha256-hq9WBV2L+ApvwjXrwyNOLNIBiQqTqCPAs5v4ICndcqs=' 'unsafe-eval' 'strict-dynamic' https:">
+<style>
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: #eee;
+}
+/*
+ * Lower the edge element in foam so there is a ~50px bar at the top where
+ * RAD/DEG and the 3 dot menu can live without clashing with calculation
+ * history. We also give .edge a ~14px buffer over which to feather out so
+ * history items have the effect of "fading out" as they reach the top of the
+ * screen.
+ */
+ .edge {
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%,
+      rgba(240, 240, 240, 1) 80%,
+      rgba(240, 240, 240, 0) 100%);
+    height: 64px;
+ }
+</style>
 </head>
 <body>
-<div class="container">
-    <div class="calculator">
-      <div class="calculator_display">0</div>
-      <div class="calculator_keys">
-        <button class="key-operator">+</button>
-        <button class="key-operator">-</button>
-        <button class="key-operator">x</button>
-        <button class="key-operator">/</button>
-        <button>7</button>
-        <button>8</button>
-		<button>9</button>
-		<button>4</button>
-		<button>5</button>
-		<button>6</button>
-		<button>1</button>
-		<button>2</button>
-		<button>3</button>
-		<button>0</button>
-        <button>.</button>
-        <button>AC</button>
-        <button class="key-equal">=</button>
-      </div>
-    </div>
-</div>
-<script>
- require('./renderer');
-</script>
+<foam model="foam.apps.calc.Calc" view="foam.apps.calc.CalcView"></foam>
+<template id="app-scripts">
+  <link rel="preload" href="./foam.js" as="script">
+  <script src="./app_bin.js"></script>
+</template>
+<script>document.head.appendChild(document.getElementById('app-scripts').content.cloneNode(true));</script>
 </body>
 </html>
