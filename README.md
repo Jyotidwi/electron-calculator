@@ -1,18 +1,22 @@
-# electron-calculator-app
-Simple electron calculator app
+# Electron Calculator <img src="https://raw.githubusercontent.com/Alex313031/electron-calculator-app/master/logo.png" width="64">
 
-This is a simple Electron calculator app.
+This is a simple Calculator app based on [Electron](https://www.electronjs.org/).
 
-Make sure that node is installed in the system.
+## Running
 
-To run the application, checkout the code into local.
+Make sure that nodejs >=10.24.1 is installed on the system.
 
-Navigate inside the application folder and run:
+To run the application, simply checkout the code locally, then navigate inside the application folder and run:
 
-<code>npm install electron --save-dev</code>
+<code>npm install && npm run start</code>
 
-This will download and install the latest electron into your system.
+This will download and install the Electron v22.3.5 in `node_modules` and then launch the application.
 
-Then run :
+You can run
+<code>npm run clean</code>
+to clean out node_modules and start fresh.
 
-<code>npm start</code>
+## About
+
+It is a port of [calculator.apps.chrome](https://calculator.apps.chrome), which is itself a web port of the original calculator app for ChromiumOS, which can be found [Here](https://chrome.google.com/webstore/detail/calculator/joodangkbfjnajiiifokapkpmhfnpleo). \
+I have also made a fork of that app, which can be found [Here](https://github.com/Alex313031/CrOS-Calc).
