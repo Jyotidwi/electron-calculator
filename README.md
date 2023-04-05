@@ -20,3 +20,7 @@ to clean out node_modules and start fresh.
 
 It is a port of [calculator.apps.chrome](https://calculator.apps.chrome), which is itself a web port of the original calculator app for ChromiumOS, which can be found [Here](https://chrome.google.com/webstore/detail/calculator/joodangkbfjnajiiifokapkpmhfnpleo). \
 I have also made a fork of that app, which can be found [Here](https://github.com/Alex313031/CrOS-Calc).
+
+### Screenshot
+
+<img src="https://raw.githubusercontent.com/Alex313031/electron-calculator-app/master/Screenshot.png" width="300">
