@@ -4,7 +4,7 @@ function createWindow () {
 	let mainWindow = new BrowserWindow({
 		width: 350,
 		height: 450,
-		icon:'./assets/ic_calculator_64.png',
+		icon: './icon64.png',
 		webPreferences: {
 		  nodeIntegration: true,
 		  webviewTag: true

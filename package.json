@@ -11,6 +11,7 @@
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
     "clean": "rm -r -f -v node_modules && rm -r -f dist/* && cd app && npm run clean",
+    "distclean": "rm -r -f dist/*",
     "build": "electron-builder --dir",
     "dist": "electron-builder",
     "start": "cd app && npm run start",
@@ -22,12 +23,21 @@
   },
   "build": {
     "electronVersion": "22.3.5",
+    "extraFiles": [
+        {
+		"from": "app/icon64.png"
+		},
+        {
+		"from": "README.md"
+		}
+	],
     "appId": "electron-calculator",
     "files": [
       "**/*"
     ],
     "linux": {
       "target": [
+        "zip",
         "deb"
       ],
       "maintainer": "Alex313031",
@@ -35,22 +45,24 @@
       "synopsis": "Calculator built with Electron.",
       "category": "Math;Utility;Calculator;",
       "executableName": "electron-calculator",
+      "artifactName": "${productName}_${version}_${arch}.${ext}",
       "desktop": {
         "Name": "Electron Calculator",
         "StartupWMClass": "electron-calculator"
       }
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "publisherName": "Alex313031"
     },
     "nsis": {
       "shortcutName": "Electron Calculator",
       "artifactName": "Electron_Calculator_Setup_${version}_${arch}.${ext}",
       "deleteAppDataOnUninstall": true,
       "uninstallDisplayName": "Electron Calculator ${version}"
-    },
-    "win": {
-      "target": [
-        "nsis"
-      ],
-      "publisherName": "Alex313031"
     }
   }
 }
