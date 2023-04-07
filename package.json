@@ -25,13 +25,13 @@
   "build": {
     "electronVersion": "22.3.5",
     "extraFiles": [
-        {
-		"from": "app/icon64.png"
-		},
-        {
-		"from": "app/README.txt"
-		}
-	],
+      {
+        "from": "app/icon64.png"
+      },
+      {
+        "from": "app/README.txt"
+      }
+    ],
     "appId": "electron-calculator",
     "files": [
       "**/*"
@@ -57,7 +57,8 @@
         "zip",
         "nsis"
       ],
-      "publisherName": "Alex313031"
+      "publisherName": "Alex313031",
+      "artifactName": "Electron_Calculator_${version}_${arch}.${ext}",
     },
     "nsis": {
       "shortcutName": "Electron Calculator",
