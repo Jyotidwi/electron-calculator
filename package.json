@@ -1,17 +1,50 @@
 {
   "name": "electron-calculator",
-  "version": "1.0.2",
-  "description": "Calculator built with Electron",
+  "appName": "Electron Calculator",
+  "applicationId": "ElectronCalculator",
+  "version": "1.0.3",
+  "description": "Calculator built with Electron.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/Alex313031/electron-calculator-app",
   "main": "./app/app.js",
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
-    "clean": "rm -r -f -v node_modules",
-    "start": "electron ."
+    "clean": "rm -r -f -v node_modules && rm -r -f dist/* && cd app && npm run clean",
+    "build": "electron-builder --dir",
+    "dist": "electron-builder",
+    "start": "cd app && npm run start",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "dependencies": {
-    "electron": "^22.3.5"
+  "devDependencies": {
+    "electron": "^22.3.5",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "electronVersion": "22.3.5",
+    "appId": "electron-calculator",
+    "files": [
+      "**/*"
+    ],
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "maintainer": "Alex313031",
+      "vendor": "Alex313031",
+      "synopsis": "Calculator built with Electron.",
+      "category": "Math;Utility;Calculator;",
+      "executableName": "electron-calculator",
+      "desktop": {
+        "Name": "Electron Calculator",
+        "StartupWMClass": "electron-calculator"
+      }
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "publisherName": "Alex313031"
+    }
   }
 }

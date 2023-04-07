@@ -4,13 +4,13 @@ function createWindow () {
 	let mainWindow = new BrowserWindow({
 		width: 350,
 		height: 450,
-		icon:'app/assets/ic_calculator_64.png',
+		icon:'./assets/ic_calculator_64.png',
 		webPreferences: {
 		  nodeIntegration: true,
 		  webviewTag: true
 		}
 	  });
-	mainWindow.loadFile('./app/index.html');
+	mainWindow.loadFile('./index.html');
 	mainWindow.setMenuBarVisibility(true);
 	mainWindow.setResizable(true);
 }
