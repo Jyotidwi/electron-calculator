@@ -11,7 +11,8 @@
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
     "clean": "rm -r -f -v node_modules",
-    "start": "../node_modules/electron/dist/electron ."
+    "start": "../node_modules/electron/dist/electron .",
+    "winstart": "..\\node_modules\\electron\\dist\\electron ."
   },
   "devDependencies": {
     "electron": "^22.3.5"

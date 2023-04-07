@@ -10,6 +10,8 @@ To run the application, simply checkout the code locally, then navigate inside t
 
 <code>npm install && npm run start</code>
 
+__Note:__ For Windows you should use <code>npm install && npm run winstart</code>
+
 This will download and install Electron [v22.3.5](https://releases.electronjs.org/releases/stable?version=22) in `node_modules` and then launch the application.
 
 You can run <code>npm run clean</code> to clean out node_modules and start fresh.

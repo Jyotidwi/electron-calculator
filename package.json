@@ -15,6 +15,7 @@
     "build": "electron-builder --dir",
     "dist": "electron-builder",
     "start": "cd app && npm run start",
+    "winstart": "cd app && npm run winstart",
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
