@@ -29,7 +29,7 @@
 		"from": "app/icon64.png"
 		},
         {
-		"from": "README.md"
+		"from": "app/README.txt"
 		}
 	],
     "appId": "electron-calculator",
