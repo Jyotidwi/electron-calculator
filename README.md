@@ -12,9 +12,12 @@ To run the application, simply checkout the code locally, then navigate inside t
 
 This will download and install Electron [v22.3.5](https://releases.electronjs.org/releases/stable?version=22) in `node_modules` and then launch the application.
 
-You can run
-<code>npm run clean</code>
-to clean out node_modules and start fresh.
+You can run <code>npm run clean</code> to clean out node_modules and start fresh.
+
+## Building
+
+ &ndash; Run <code>npm run build</code> to build an unpacked version of it in `./dist/` \
+ &ndash; Run <code>npm run dist</code> to build .deb and .exe installers for it in `./dist/`
 
 ## About
 
