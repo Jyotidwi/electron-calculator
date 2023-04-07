@@ -58,7 +58,7 @@
         "nsis"
       ],
       "publisherName": "Alex313031",
-      "artifactName": "Electron_Calculator_${version}_${arch}.${ext}",
+      "artifactName": "Electron_Calculator_${version}_${arch}.${ext}"
     },
     "nsis": {
       "shortcutName": "Electron Calculator",
