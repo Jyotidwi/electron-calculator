@@ -40,6 +40,12 @@
         "StartupWMClass": "electron-calculator"
       }
     },
+    "nsis": {
+      "shortcutName": "Electron Calculator",
+      "artifactName": "Electron_Calculator_Setup_${version}_${arch}.${ext}",
+      "deleteAppDataOnUninstall": true,
+      "uninstallDisplayName": "Electron Calculator ${version}"
+    },
     "win": {
       "target": [
         "nsis"
