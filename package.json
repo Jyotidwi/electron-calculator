@@ -19,11 +19,11 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "electron": "22.3.6",
+    "electron": "22.3.7",
     "electron-builder": "^22.14.13"
   },
   "build": {
-    "electronVersion": "22.3.6",
+    "electronVersion": "22.3.7",
     "extraFiles": [
       {
         "from": "app/icon64.png"
@@ -58,6 +58,7 @@
         "nsis"
       ],
       "publisherName": "Alex313031",
+      "executableName": "electron-calculator",
       "artifactName": "Electron_Calculator_${version}_${arch}.${ext}"
     },
     "nsis": {

@@ -15,6 +15,6 @@
     "winstart": "..\\node_modules\\electron\\dist\\electron ."
   },
   "devDependencies": {
-    "electron": "22.3.6"
+    "electron": "22.3.7"
   }
 }

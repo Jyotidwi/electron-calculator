@@ -7,6 +7,7 @@ function createWindow () {
 		icon: './icon64.png',
 		webPreferences: {
 		  nodeIntegration: true,
+		  experimentalFeatures: true,
 		  webviewTag: true
 		}
 	  });
