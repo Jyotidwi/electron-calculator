@@ -1,19 +1,27 @@
 const { app, BrowserWindow } = require('electron')
+  const path = require('path')
+  const url = require('url')
 
 function createWindow () {
-	let mainWindow = new BrowserWindow({
-		width: 350,
-		height: 450,
-		icon: './icon64.png',
-		webPreferences: {
-		  nodeIntegration: true,
-		  experimentalFeatures: true,
-		  webviewTag: true
-		}
-	  });
-	mainWindow.loadFile('./index.html');
-	mainWindow.setMenuBarVisibility(true);
-	mainWindow.setResizable(true);
+    let mainWindow = new BrowserWindow({
+      width: 350,
+      height: 450,
+      icon: './icon64.png',
+      webPreferences: {
+        experimentalFeatures: true,
+        nodeIntegration: true,
+        webviewTag: true
+      }
+    });
+
+    // Load the index.html of the app.
+    mainWindow.loadURL(url.format({
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
+    }));
+    mainWindow.setMenuBarVisibility(true);
+    mainWindow.setResizable(true);
 }
 app.whenReady().then(createWindow);
 app.commandLine.appendSwitch('enable-experimental-web-platform-features');

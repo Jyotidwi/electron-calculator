@@ -26,13 +26,13 @@
     "electronVersion": "22.3.7",
     "extraFiles": [
       {
-        "from": "app/icon64.png"
+        "from": "assets/icon64.png"
       },
       {
-        "from": "app/README.txt"
+        "from": "assets/README.txt"
       }
     ],
-    "appId": "electron-calculator",
+    "appId": "com.electron.electron-calculator",
     "files": [
       "**/*"
     ],
@@ -49,7 +49,9 @@
       "artifactName": "${productName}_${version}_${arch}.${ext}",
       "desktop": {
         "Name": "Electron Calculator",
-        "StartupWMClass": "electron-calculator"
+        "StartupWMClass": "electron-calculator",
+        "Keywords": "calculator;math;",
+        "Icon": "electron-calculator"
       }
     },
     "win": {
