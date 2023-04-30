@@ -2,7 +2,7 @@
   "name": "electron-calculator",
   "appName": "Electron Calculator",
   "applicationId": "ElectronCalculator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Calculator built with Electron.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
@@ -60,7 +60,7 @@
         "nsis"
       ],
       "publisherName": "Alex313031",
-      "executableName": "electron-calculator",
+      "executableName": "electron_calculator",
       "artifactName": "Electron_Calculator_${version}_${arch}.${ext}"
     },
     "nsis": {
