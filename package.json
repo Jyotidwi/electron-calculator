@@ -2,7 +2,7 @@
   "name": "electron-calculator",
   "appName": "Electron Calculator",
   "applicationId": "ElectronCalculator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Calculator built with Electron.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
@@ -10,73 +10,19 @@
   "main": "./app/app.js",
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
-    "clean": "rm -r -f -v node_modules && rm -r -f dist/* && cd app && npm run clean",
-    "distclean": "rm -r -f dist/*",
+    "clean": "rimraf dist/* && rimraf node_modules && cd app && npm run clean",
+    "distclean": "rimraf dist/*",
     "build": "electron-builder --dir",
     "dist": "electron-builder",
-    "start": "cd app && npm run start",
-    "winstart": "cd app && npm run winstart",
+    "start": "electron ./app",
+    "winstart": "electron app",
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "electron-context-menu": "^3.6.1"
   },
   "devDependencies": {
-    "electron": "git+https://github.com/Alex313031/electron-releases-22.git#9e0a27c",
-    "electron-builder": "^22.14.13"
-  },
-  "build": {
-    "electronVersion": "22.3.7",
-    "electronDownload": {
-        "isVerifyChecksum": false,
-        "strictSSL": false,
-        "cache": "electron",
-        "mirror": "https://github.com/Alex313031/electron-22/releases/download/v"
-    },
-    "extraFiles": [
-      {
-        "from": "assets/icon64.png"
-      },
-      {
-        "from": "assets/README.txt"
-      }
-    ],
-    "appId": "com.electron.electron-calculator",
-    "files": [
-      "**/*"
-    ],
-    "linux": {
-      "target": [
-        "zip",
-        "deb"
-      ],
-      "maintainer": "Alex313031",
-      "vendor": "Alex313031",
-      "synopsis": "Calculator built with Electron.",
-      "category": "Math;Utility;Calculator;",
-      "executableName": "electron-calculator",
-      "artifactName": "${productName}_${version}_${arch}.${ext}",
-      "desktop": {
-        "Name": "Electron Calculator",
-        "StartupWMClass": "electron-calculator",
-        "Keywords": "calculator;math;",
-        "Icon": "electron-calculator"
-      }
-    },
-    "win": {
-      "target": [
-        "zip",
-        "nsis"
-      ],
-      "publisherName": "Alex313031",
-      "executableName": "electron_calculator",
-      "artifactName": "Electron_Calculator_${version}_${arch}.${ext}"
-    },
-    "nsis": {
-      "shortcutName": "Electron Calculator",
-      "artifactName": "Electron_Calculator_Setup_${version}_${arch}.${ext}",
-      "deleteAppDataOnUninstall": true,
-      "uninstallDisplayName": "Electron Calculator ${version}"
-    }
+    "electron": "22.3.12",
+    "electron-builder": "22.14.13"
   }
 }

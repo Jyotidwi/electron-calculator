@@ -1,0 +1,53 @@
+{
+  "electronVersion": "22.3.12",
+  "asar": true,
+  "productName": "Electron Calculator",
+  "directories": {
+      "app": "app"
+  },
+  "extraFiles": [
+    {
+      "from": "assets/icon64.png"
+    },
+    {
+      "from": "assets/README.txt"
+    }
+  ],
+  "appId": "com.electron.electron-calculator",
+  "files": [
+    "**/*"
+  ],
+  "linux": {
+    "target": [
+      "zip",
+      "deb"
+    ],
+    "maintainer": "Alex313031",
+    "vendor": "Alex313031",
+    "synopsis": "Calculator built with Electron.",
+    "category": "Math;Utility;Calculator;",
+    "executableName": "electron-calculator",
+    "artifactName": "electron-calculator_${version}_${arch}.${ext}",
+    "desktop": {
+      "Name": "Electron Calculator",
+      "StartupWMClass": "electron-calculator",
+      "Keywords": "calculator;math;",
+      "Icon": "electron-calculator"
+    }
+  },
+  "win": {
+    "target": [
+      "zip",
+      "nsis"
+    ],
+    "publisherName": "Alex313031",
+    "executableName": "electron_calculator",
+    "artifactName": "Electron_Calculator_${version}_${arch}.${ext}"
+  },
+  "nsis": {
+    "shortcutName": "Electron Calculator",
+    "artifactName": "Electron_Calculator_Setup_${version}_${arch}.${ext}",
+    "deleteAppDataOnUninstall": true,
+    "uninstallDisplayName": "Electron Calculator ${version}"
+  }
+}
