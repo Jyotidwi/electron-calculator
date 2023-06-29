@@ -18,7 +18,7 @@
     "burn": "rimraf package-lock.json && rimraf ./app/package-lock.json",
     "build": "electron-builder --dir",
     "dist": "electron-builder",
-    "lint": "eslint \"app/**/*.js*\"",
+    "lint": "eslint \"app/app.js\"",
     "start": "electron ./app",
     "winstart": "electron app",
     "postinstall": "electron-builder install-app-deps"
