@@ -2,23 +2,29 @@
   "name": "electron-calculator",
   "appName": "Electron Calculator",
   "applicationId": "ElectronCalculator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Calculator built with Electron.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/Alex313031/electron-calculator-app",
   "main": "./app.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
     "clean": "rimraf node_modules",
+    "burn": "rimraf package-lock.json",
     "start": "electron .",
     "winstart": "electron ."
   },
   "dependencies": {
+    "@electron/remote": "2.0.10",
     "electron-context-menu": "^3.6.1"
   },
   "devDependencies": {
-    "electron": "22.3.12",
-    "rimraf": "3.0.2"
+    "asar": "3.2.0",
+    "electron": "22.3.14",
+    "rimraf": "4.4.1"
   }
 }

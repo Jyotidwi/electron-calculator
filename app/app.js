@@ -1,19 +1,35 @@
 const { app, BrowserWindow, shell, dialog, Menu } = require('electron');
 const contextMenu = require('electron-context-menu');
-  const path = require('path');
-  const url = require('url');
+const path = require('path');
+const url = require('url');
+
+// Initialize Electron remote module
+require('@electron/remote/main').initialize();
 
 function createWindow () {
     let mainWindow = new BrowserWindow({
+      title: 'Electron Calculator',
+      resizable: true,
+      maximizable: true,
       width: 350,
       height: 450,
-      icon: './icon64.png',
+      icon: path.join(__dirname, 'icon64.png'),
       webPreferences: {
+        nodeIntegration: false,
+        nodeIntegrationInWorker: false,
+        contextIsolation: false,
+        sandbox: false,
         experimentalFeatures: true,
-        nodeIntegration: true,
-        webviewTag: true
+        webviewTag: true,
+        devTools: true,
+        javascript: true,
+        plugins: true,
+        enableRemoteModule: true,
+        // Preload before renderer processes
+        preload: path.join(__dirname, 'preload.js')
       }
     });
+    require("@electron/remote/main").enable(mainWindow.webContents);
 
     // Load the index.html of the app.
     mainWindow.loadURL(url.format({
@@ -41,7 +57,7 @@ contextMenu({
 });
 
 app.whenReady().then(createWindow);
-app.commandLine.appendSwitch('enable-experimental-web-platform-features');
+// app.commandLine.appendSwitch('enable-experimental-web-platform-features');
 app.commandLine.appendSwitch('allow-file-access-from-files');
 app.commandLine.appendSwitch('enable-local-file-accesses');
 app.commandLine.appendSwitch('enable-quic');
