@@ -2,7 +2,7 @@
   "name": "electron-calculator",
   "appName": "Electron Calculator",
   "applicationId": "ElectronCalculator",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Calculator built with Electron.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "asar": "3.2.0",
-    "electron": "22.3.17",
+    "electron": "22.3.18",
     "electron-builder": "23.6.0",
     "eslint": "8.42.0",
     "rimraf": "4.4.1"
