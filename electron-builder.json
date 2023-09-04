@@ -53,6 +53,6 @@
     "uninstallDisplayName": "Electron Calculator ${version}"
   },
   "portable": {
-    "artifactName": "electron_calculator_portable_${version}_${arch}.${ext}",
+    "artifactName": "electron_calculator_portable_${version}_${arch}.${ext}"
   }
 }
