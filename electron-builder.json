@@ -39,16 +39,20 @@
   "win": {
     "target": [
       "zip",
-      "nsis"
+      "nsis",
+      "portable"
     ],
     "publisherName": "Alex313031",
     "executableName": "electron_calculator",
-    "artifactName": "Electron_Calculator_${version}_${arch}.${ext}"
+    "artifactName": "electron_calculator_win64_${version}_${arch}.${ext}"
   },
   "nsis": {
     "shortcutName": "Electron Calculator",
-    "artifactName": "Electron_Calculator_Setup_${version}_${arch}.${ext}",
+    "artifactName": "electron_calculator_setup_${version}_${arch}.${ext}",
     "deleteAppDataOnUninstall": true,
     "uninstallDisplayName": "Electron Calculator ${version}"
+  },
+  "portable": {
+    "artifactName": "electron_calculator_portable_${version}_${arch}.${ext}",
   }
 }
