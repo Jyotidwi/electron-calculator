@@ -50,6 +50,14 @@ function createWindow () {
 	  label: 'App',
 	  submenu: [
 	    {
+          label: 'Relaunch',
+          click() {
+            app.relaunch();
+            app.quit();
+          }
+        },
+        { type: 'separator' },
+	    {
           label: 'Quit',
           accelerator: 'CmdOrCtrl+Q',
           role: 'quit'
