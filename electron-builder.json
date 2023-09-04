@@ -2,8 +2,11 @@
   "electronVersion": "22.3.23",
   "asar": true,
   "productName": "Electron Calculator",
+  "appId": "com.electron.electron-calculator",
   "directories": {
-      "app": "app"
+      "app": "app",
+      "buildResources": "build",
+      "output": "dist"
   },
   "extraFiles": [
     {
@@ -13,7 +16,6 @@
       "from": "assets/README.txt"
     }
   ],
-  "appId": "com.electron.electron-calculator",
   "files": [
     "**/*"
   ],
