@@ -1,5 +1,5 @@
 {
-  "electronVersion": "22.3.21",
+  "electronVersion": "22.3.23",
   "asar": true,
   "productName": "Electron Calculator",
   "directories": {
