@@ -8680,7 +8680,7 @@
         a = g(a);
         a.yb(b);
         b = a.Xc();
-        e && (b.F = "http://0.0.0.0:8000/report");
+        e && (b.F = "https://github.com/Alex313031/electron-calculator/issues");
         b.o = !0;
         b.Id(f);
         nc(b, c, d)
