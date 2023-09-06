@@ -1121,7 +1121,7 @@
             constructor() {
                 this.MSG_OVERFLOW_MENU = "More options";
                 this.MSG_ABOUT = "About";
-                this.MSG_ABOUT_APP = "About App";
+                this.MSG_ABOUT_APP = "ReadMe";
                 this.MSG_LICENSES = "Licenses";
                 this.MSG_GITHUB = "GitHub"
             }
@@ -4974,7 +4974,7 @@
         }
         j() {
             return I `
-      <ea-oss-notices src="notices.json"></ea-oss-notices>
+      <ea-oss-notices src="./notices.json"></ea-oss-notices>
     `
         }
     };
@@ -7465,12 +7465,12 @@
                         corner: "TOP_START",
                         menuCorner: "END",
                         entries: [ki("aboutapp", b, () => {
-                            var f = `./about.html`;
+                            var f = `https://github.com/Alex313031/electron-calculator#readme`;
                             f = Db(f, Cb) || zb;
-                            window.open(Eb(f), "aboutapp", "width=400,height=320")
+                            window.open(Eb(f), "aboutapp", "width=900,height=700")
                         },fi), ki("licenses", c, () => {
                             var f = Db("#licenses", Cb) || zb;
-                            window.open(Eb(f), "licenses", "width=800,height=700")
+                            window.open(Eb(f), "licenses", "width=700,height=700")
                         }, fi), ki("github", d, () => {
                             var f = `https://github.com/Alex313031/electron-calculator-app`;
                             f = Db(f, Cb) || zb;
