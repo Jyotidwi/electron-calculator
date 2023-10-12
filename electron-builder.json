@@ -1,5 +1,5 @@
 {
-  "electronVersion": "22.3.24",
+  "electronVersion": "22.3.27",
   "asar": true,
   "productName": "Electron Calculator",
   "appId": "com.electron.electron-calculator",
