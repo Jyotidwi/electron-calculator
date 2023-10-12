@@ -2,7 +2,7 @@
   "name": "electron-calculator",
   "appName": "Electron Calculator",
   "applicationId": "ElectronCalculator",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Calculator built with Electron.",
   "author": "Alex313031",
   "license": "BSD-3-Clause",
